@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Phishing URL Detector</title>
+</head>
+<body>
+    <h2>Enter a URL to Check:</h2>
+    <form method="post">
+        <input type="text" name="url" required>
+        <input type="submit" value="Check">
+    </form>
+    {% if prediction is not none %}
+        <h3>Result: {{ 'Phishing' if prediction == 1 else 'Safe' }}</h3>
+    {% endif %}
+</body>
+</html>
